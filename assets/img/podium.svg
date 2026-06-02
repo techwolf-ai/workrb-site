@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 360" role="img" aria-labelledby="podiumTitle podiumDesc" font-family="system-ui, -apple-system, sans-serif">
+  <title id="podiumTitle">Prize podium with main and student tracks</title>
+  <desc id="podiumDesc">A three-step podium. The top step holds two winners standing side by side, one in a graduation cap representing the student-track winner.</desc>
+
+  <defs>
+    <linearGradient id="podGold" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fde58a"/><stop offset="100%" stop-color="#c98a00"/>
+    </linearGradient>
+    <linearGradient id="podSilver" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e7e7e7"/><stop offset="100%" stop-color="#9a9a9a"/>
+    </linearGradient>
+    <linearGradient id="podBronze" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e7b787"/><stop offset="100%" stop-color="#9c6325"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ground line -->
+  <line x1="0" y1="340" x2="720" y2="340" stroke="#efe6c8" stroke-width="2"/>
+
+  <!-- second place (left) -->
+  <rect x="120" y="220" width="160" height="120" rx="6" fill="url(#podSilver)"/>
+  <text x="200" y="295" text-anchor="middle" font-size="44" font-weight="800" fill="#3d3d3d">2</text>
+  <text x="200" y="320" text-anchor="middle" font-size="14" fill="#1a1a1a">€1000</text>
+
+  <!-- first place (centre, taller) -->
+  <rect x="280" y="170" width="160" height="170" rx="6" fill="url(#podGold)"/>
+  <text x="360" y="255" text-anchor="middle" font-size="54" font-weight="800" fill="#5a3a00">1</text>
+  <text x="360" y="295" text-anchor="middle" font-size="14" fill="#1a1a1a">€2000 main</text>
+  <text x="360" y="312" text-anchor="middle" font-size="14" fill="#1a1a1a">+ €1000 student</text>
+
+  <!-- third place (right) -->
+  <rect x="440" y="250" width="160" height="90" rx="6" fill="url(#podBronze)"/>
+  <text x="520" y="310" text-anchor="middle" font-size="38" font-weight="800" fill="#5a2f0a">3</text>
+  <text x="520" y="330" text-anchor="middle" font-size="14" fill="#1a1a1a">€500</text>
+
+  <!-- figure: 2nd place winner -->
+  <g transform="translate(200 215)">
+    <circle cx="0" cy="-30" r="12" fill="#fffdf7" stroke="#1a1a1a" stroke-width="1.8"/>
+    <path d="M-4,-32 q4,3 8,0" stroke="#1a1a1a" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+    <circle cx="-4" cy="-33" r="1.4" fill="#1a1a1a"/><circle cx="4" cy="-33" r="1.4" fill="#1a1a1a"/>
+    <path d="M0,-18 L0,-2 M0,-14 L-10,-8 M0,-14 L10,-8 M0,-2 L-8,8 M0,-2 L8,8" stroke="#1a1a1a" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+  </g>
+
+  <!-- figure: 3rd place winner -->
+  <g transform="translate(520 245)">
+    <circle cx="0" cy="-30" r="12" fill="#fffdf7" stroke="#1a1a1a" stroke-width="1.8"/>
+    <path d="M-4,-32 q4,3 8,0" stroke="#1a1a1a" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+    <circle cx="-4" cy="-33" r="1.4" fill="#1a1a1a"/><circle cx="4" cy="-33" r="1.4" fill="#1a1a1a"/>
+    <path d="M0,-18 L0,-2 M0,-14 L-10,-8 M0,-14 L10,-8 M0,-2 L-8,8 M0,-2 L8,8" stroke="#1a1a1a" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+  </g>
+
+  <!-- two figures on first-place step: main winner (left) + student winner (right with grad cap) -->
+  <!-- main winner -->
+  <g transform="translate(335 165)">
+    <circle cx="0" cy="-32" r="13" fill="#fffdf7" stroke="#1a1a1a" stroke-width="1.8"/>
+    <path d="M-4,-34 q4,3.5 8,0" stroke="#1a1a1a" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+    <circle cx="-4" cy="-35" r="1.4" fill="#1a1a1a"/><circle cx="4" cy="-35" r="1.4" fill="#1a1a1a"/>
+    <!-- raised arm with trophy -->
+    <path d="M0,-19 L0,-2 M0,-2 L-9,9 M0,-2 L9,9 M0,-14 L-11,-8 M0,-14 L8,-26" stroke="#1a1a1a" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+    <!-- trophy -->
+    <g transform="translate(8 -30)">
+      <path d="M-5,-6 h10 v3 a5,5 0 0 1 -10,0 z" fill="#f5b301" stroke="#1a1a1a" stroke-width="1.2"/>
+      <rect x="-2" y="-2" width="4" height="4" fill="#c98a00"/>
+      <rect x="-4" y="2" width="8" height="2" fill="#1a1a1a"/>
+    </g>
+    <text x="0" y="22" text-anchor="middle" font-size="11" font-weight="700" fill="#1a1a1a">Main</text>
+  </g>
+
+  <!-- student winner with grad cap -->
+  <g transform="translate(385 165)">
+    <circle cx="0" cy="-32" r="13" fill="#fffdf7" stroke="#1a1a1a" stroke-width="1.8"/>
+    <path d="M-4,-34 q4,3.5 8,0" stroke="#1a1a1a" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+    <circle cx="-4" cy="-35" r="1.4" fill="#1a1a1a"/><circle cx="4" cy="-35" r="1.4" fill="#1a1a1a"/>
+    <!-- mortar board cap -->
+    <g transform="translate(0 -45)">
+      <rect x="-3" y="0" width="6" height="3" fill="#1a1a1a"/>
+      <polygon points="-12,-1 12,-1 8,-6 -8,-6" fill="#1a1a1a"/>
+      <circle cx="0" cy="-4" r="1.4" fill="#f5b301"/>
+      <path d="M0,-4 L8,4" stroke="#f5b301" stroke-width="1.4" fill="none"/>
+      <circle cx="8" cy="4" r="1.6" fill="#f5b301"/>
+    </g>
+    <path d="M0,-19 L0,-2 M0,-2 L-9,9 M0,-2 L9,9 M0,-14 L-9,-22 M0,-14 L11,-8" stroke="#1a1a1a" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+    <text x="0" y="22" text-anchor="middle" font-size="11" font-weight="700" fill="#1a1a1a">Student</text>
+  </g>
+
+  <!-- caption -->
+  <text x="360" y="30" text-anchor="middle" font-size="15" font-weight="700" fill="#1a1a1a">€5000 prize pool, with a parallel student track</text>
+</svg>

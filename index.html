@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>WorkRB: a shared yardstick for AI in the world of work</title>
+  <meta name="description" content="WorkRB (worker bee) is an open, community-driven evaluation framework built jointly by academia, industry, and public institutions. It unifies 14 tasks (skill extraction, normalisation, similarity, and matching) to check how well AI understands jobs, skills, and careers, with many tasks covering multiple languages (up to 28 for ESCO-backed tasks)." />
+  <link rel="canonical" href="https://techwolf-ai.github.io/workrb-site/" />
+  <link rel="icon" href="assets/img/workrb-logo.png" />
+  <link rel="stylesheet" href="assets/css/site.css" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="WorkRB: a shared yardstick for AI in the world of work" />
+  <meta property="og:description" content="An open, community-driven framework built across academia, industry, and public institutions to check how well AI understands jobs, skills, and careers. 14 tasks spanning extraction, normalisation, similarity, and matching, with many tasks covering multiple languages." />
+  <meta property="og:image" content="https://techwolf-ai.github.io/workrb-site/assets/img/workrb-logo.png" />
+  <meta property="og:url" content="https://techwolf-ai.github.io/workrb-site/" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "WorkRB",
+    "alternateName": "worker bee",
+    "applicationCategory": "DeveloperApplication",
+    "operatingSystem": "Cross-platform",
+    "description": "An open, community-driven evaluation framework for AI in the work domain, built jointly by academia, industry, and public institutions. Unifies 14 tasks across four families (skill extraction, skill and job normalisation, similarity, and matching including candidate-to-project ranking), with many tasks covering multiple languages (up to 28 for ESCO-backed tasks).",
+    "url": "https://techwolf-ai.github.io/workrb-site/",
+    "downloadUrl": "https://pypi.org/project/workrb/",
+    "codeRepository": "https://github.com/techwolf-ai/workrb",
+    "license": "https://github.com/techwolf-ai/workrb/blob/main/LICENSE",
+    "publisher": { "@type": "Organization", "name": "TechWolf", "url": "https://techwolf.ai" },
+    "keywords": "workrb, worker bee, skill extraction, ESCO, skill normalisation, HR AI, job-skill matching, benchmark, recsys-hr"
+  }
+  </script>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="./">
+      <img src="assets/img/workrb-logo.png" alt="WorkRB logo" />
+      <span>WorkRB</span>
+    </a>
+    <div class="nav-links">
+      <a href="#what" class="active">What it is</a>
+      <a href="#covers">What it covers</a>
+      <a href="#why">Why it matters</a>
+      <a href="#how">How it works</a>
+      <a href="#collaborate">Get involved</a>
+      <a href="#cite">Cite</a>
+      <a href="#resources">Links</a>
+      <div class="dropdown" tabindex="0">
+        <a href="#challenges">Challenges &#9662;</a>
+        <div class="dropdown-menu" role="menu">
+          <a href="challenges/recsys-hr-2026.html">RecSys-HR 2026 <span class="muted">(active)</span></a>
+        </div>
+      </div>
+      <a href="https://github.com/techwolf-ai/workrb">GitHub</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="container">
+    <img class="logo" src="assets/img/workrb-logo.png" alt="WorkRB worker-bee logo" />
+    <h1>WorkRB</h1>
+    <p class="tagline">A shared yardstick for AI that reads CVs, matches people to jobs, and makes sense of skills.</p>
+    <p class="pronounce">pronounced <em>worker bee</em> &nbsp;🐝</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="challenges/recsys-hr-2026.html">RecSys-HR 2026 Challenge is live</a>
+      <a class="btn btn-secondary" href="#what">Learn more</a>
+      <a class="btn btn-secondary" href="https://github.com/techwolf-ai/workrb">For developers: GitHub</a>
+    </div>
+    <p class="partners" style="margin-top:1.5rem;">
+      Powered by <a href="https://techwolf.com/"><img class="techwolf-logo" src="assets/img/techwolf-wordmark.svg" alt="TechWolf" /></a>
+    </p>
+  </div>
+</header>
+
+<section id="what">
+  <div class="container">
+    <h2>What is WorkRB, and what is it for?</h2>
+    <p class="lead">
+      Modern AI is starting to take part in some of the most important decisions in a person’s working life:
+      which job listing they see first, which CVs a recruiter reads, what skill a training programme suggests
+      next. WorkRB is a public, open way to check how well that AI is actually doing.
+    </p>
+
+    <p>
+      Think of WorkRB as a standardised test for AI in the world of work. It is a joint effort across
+      <strong>academia, industry, and public institutions</strong>, three communities that each hold a different
+      piece of the puzzle. Industry partners contribute models and datasets drawn from real-world hiring and
+      talent platforms; academic labs bring methodology and published research; public institutions maintain
+      the multilingual occupational ontologies (such as ESCO from the European Commission and O*NET from the
+      US Department of Labor) that act as the shared vocabulary of work.
+    </p>
+
+    <p>
+      Anyone, from a university lab to a job platform to a single curious developer, can run the same test on
+      their system. When everyone sits the same exam, results become comparable, progress becomes visible, and
+      the field can move forward together.
+    </p>
+  </div>
+</section>
+
+<section id="covers">
+  <div class="container">
+    <h2>What WorkRB currently covers</h2>
+    <p class="lead">
+      WorkRB today bundles <strong>14 tasks</strong> (13 ranking tasks plus one classification task), grouped
+      into four task families that an AI system for the world of work can be asked to do: <strong>extraction,
+      normalisation, similarity, and matching</strong>.
+    </p>
+
+    <div class="feature-grid">
+      <div class="feature">
+        <div class="icon">📝</div>
+        <h3>Extraction</h3>
+        <p>
+          Given a job ad written by a human, can the AI pick out the actual skills being discussed? For example,
+          spotting that “built dashboards in Tableau” involves data visualisation. WorkRB tests this
+          on three different skill-extraction datasets.
+        </p>
+      </div>
+      <div class="feature">
+        <div class="icon">🏷️</div>
+        <h3>Normalisation</h3>
+        <p>
+          People describe the same skill or job title in countless ways. WorkRB checks whether the AI can map
+          those free-form phrases onto a shared vocabulary (such as ESCO), so that two systems can talk about
+          the same thing. It covers normalisation of both skills and job titles.
+        </p>
+      </div>
+      <div class="feature">
+        <div class="icon">🔎</div>
+        <h3>Similarity</h3>
+        <p>
+          Is a “Data Engineer” close to a “Big Data Developer”? Are two phrasings of a
+          skill really the same? WorkRB scores whether the AI sees past surface labels, on both job-title and
+          skill similarity.
+        </p>
+      </div>
+      <div class="feature">
+        <div class="icon">🤝</div>
+        <h3>Matching</h3>
+        <p>
+          Which skills does a given job typically need, and the other way around? Which candidate profiles best
+          fit a freelance project or a search query? WorkRB groups together these “given one thing, rank
+          the other” questions across jobs, skills, and candidate profiles.
+        </p>
+      </div>
+    </div>
+
+    <p style="margin-top:1.5rem;">
+      Many of these tasks are evaluated in multiple languages, because work doesn’t happen in English
+      alone. Tasks built on ESCO cover up to <strong>28 languages</strong>, the full ESCO coverage; others are
+      narrower (for example, candidate-matching tasks cover 5 languages, and one skill-similarity dataset is
+      English-only). The cross-lingual setting (say, French queries against English targets) is supported
+      alongside the monolingual one where the data allows it. The exact language coverage per task is listed
+      in the <a href="https://github.com/techwolf-ai/workrb">repository</a>.
+    </p>
+
+    <p>
+      WorkRB is under continuous development by community contributions. Future directions include occupational
+      activities, additional ontologies, temporal evaluation, career-path recommendation, and multi-branch
+      architectures such as large language models and re-ranking approaches. If you have an idea for something
+      WorkRB should test, or a project you’d like to work on together, open an issue on
+      <a href="https://github.com/techwolf-ai/workrb">GitHub</a> or email us at
+      <a href="mailto:workrb@techwolf.ai">workrb@techwolf.ai</a>.
+    </p>
+  </div>
+</section>
+
+<section id="why">
+  <div class="container">
+    <h2>Why a shared yardstick matters</h2>
+    <p>
+      AI in HR and the labour market sits close to decisions that affect real lives: hiring, learning, pay,
+      and access to opportunity. Today, the systems that drive those decisions are evaluated mostly behind
+      closed doors, by the same teams that build them. Claims are hard to compare. Progress is easy to
+      overstate. And outsiders almost never get the chance to spot blind spots.
+    </p>
+    <p>
+      WorkRB is a joint attempt to fix that, built across academia, industry, and public institutions. By being
+      open about the tasks, the data, and the scoring, it gives:
+    </p>
+    <ul>
+      <li><strong>Researchers</strong> a place to test new ideas against a serious, public reference.</li>
+      <li><strong>HR teams and platforms</strong> a way to ask vendors “how does your AI score on this?” and get a number they can compare to other vendors.</li>
+      <li><strong>Public institutions and policy makers</strong> a clearer view of what these systems can and can’t do, and a basis for compliance and standardisation work (such as the EU AI Act’s requirements for high-risk employment AI).</li>
+      <li><strong>Jobseekers and workers</strong>, indirectly, fairer and more accurate tools downstream.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="how">
+  <div class="container">
+    <h2>How it works, briefly</h2>
+    <p>
+      WorkRB is a free, open-source software package. Anyone with an AI model for jobs or skills can plug it
+      in and get a scorecard within minutes, on the same tasks everyone else is using. The package comes with
+      reference models out of the box, so every new result has a baseline to compare against.
+    </p>
+    <p>
+      We deliberately keep the technical surface small on this page. If you build or run these systems, the
+      best place to start is the GitHub repository, where you’ll find the installation steps, the full
+      list of tasks, the baselines, and the code you need to add your own model.
+    </p>
+    <p>
+      <a class="btn btn-secondary" href="https://github.com/techwolf-ai/workrb">Go to the GitHub repository &rarr;</a>
+    </p>
+  </div>
+</section>
+
+<section id="collaborate">
+  <div class="container">
+    <h2>Get involved</h2>
+    <p>
+      WorkRB is open source and sustained by its three-pillar community: academia, industry, and public
+      institutions. Wherever you sit, there’s a useful way to take part.
+    </p>
+    <ul>
+      <li><strong>Academic researchers:</strong> share datasets, propose new tasks, or run your model and report results against the public reference.</li>
+      <li><strong>Industry partners:</strong> contribute models, baselines, and real-world task formulations from hiring, talent management, and workforce analytics.</li>
+      <li><strong>Public institutions and employment services:</strong> help keep the multilingual occupational ontologies aligned with how the labour market actually evolves.</li>
+      <li><strong>HR teams, recruiters, and career professionals:</strong> tell us which real-world questions are missing from the test, so the benchmark stays grounded in what actually matters at work.</li>
+      <li><strong>Developers:</strong> contribute baselines, fix issues, or extend the framework through the <a href="https://github.com/techwolf-ai/workrb">GitHub repository</a>.</li>
+      <li><strong>Educators and writers:</strong> help us explain the project to a wider audience and improve the documentation.</li>
+    </ul>
+    <p>
+      For research collaborations, partnerships, or any conversation that doesn’t fit in a code review,
+      please email us at <a href="mailto:workrb@techwolf.ai">workrb@techwolf.ai</a>. For anything code-related,
+      the <a href="https://github.com/techwolf-ai/workrb">GitHub repository</a> is the best starting point.
+    </p>
+  </div>
+</section>
+
+<section id="cite">
+  <div class="container">
+    <h2>Cite</h2>
+    <p>
+      If you write about WorkRB in academic work, please cite the framework paper below. The companion
+      Unified Work Embeddings paper is the reference for the bidirectional multi-task ranker used as a baseline.
+    </p>
+    <div class="callout">
+      <strong>WorkRB: A Community-Driven Evaluation Framework for AI in the Work Domain</strong><br />
+      De Lange, Veys, Retyk, Deniz, Jouanneau, Zhang, Bielinski, Jouffroy, Clobes, Baranowska, Graus, Palyart,
+      Zbib, Gkatzia, Demeester, De Bie, Bogers, Decorte, Van Hautte. 2026.<br />
+      <a href="https://arxiv.org/abs/2604.13055">arXiv:2604.13055</a>
+    </div>
+<pre><code>@article{delange2026workrb,
+  title   = {WorkRB: A Community-Driven Evaluation Framework for AI in the Work Domain},
+  author  = {De Lange, Matthias and Veys, Warre and Retyk, Federico and Deniz, Daniel
+             and Jouanneau, Warren and Zhang, Mike and Bielinski, Aleksander
+             and Jouffroy, Emma and Clobes, Nicole and Baranowska, Nina
+             and Graus, David and Palyart, Marc and Zbib, Rabih and Gkatzia, Dimitra
+             and Demeester, Thomas and De Bie, Tijl and Bogers, Toine
+             and Decorte, Jens-Joris and Van Hautte, Jeroen},
+  journal = {arXiv preprint arXiv:2604.13055},
+  year    = {2026}
+}</code></pre>
+    <p style="margin-top:1.25rem;">
+      Companion baseline paper:
+    </p>
+    <div class="callout">
+      <strong>Unified Work Embeddings: Contrastive Learning of a Bidirectional Multi-task Ranker</strong><br />
+      Matthias De Lange, Jens-Joris Decorte, Jeroen Van Hautte. 2025.<br />
+      <a href="https://arxiv.org/abs/2511.07969">arXiv:2511.07969</a>
+    </div>
+  </div>
+</section>
+
+<section id="challenges">
+  <div class="container">
+    <h2>Challenges powered by WorkRB</h2>
+    <p>WorkRB is the evaluation backbone for community challenges in the HR-AI space.</p>
+    <div class="feature-grid">
+      <div class="feature">
+        <h3>RecSys-HR 2026 Challenge <span style="color:var(--honey-deep);font-size:.8rem;">LIVE</span></h3>
+        <p>
+          ESCO skill extraction and normalisation in free-form text, scored with graded relevance through WorkRB.
+          Registration is open on CodaBench, starter code is on GitHub, and €5000 in prizes is up for grabs (with a
+          dedicated student track). Top teams get a pitch slot at the RecSys-HR workshop.
+        </p>
+        <p>
+          <a class="btn btn-primary" href="challenges/recsys-hr-2026.html">Details &rarr;</a>
+          <a class="btn btn-secondary" href="https://www.codabench.org/competitions/16583/" rel="noopener">Register on CodaBench &rarr;</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer id="resources">
+  <div class="container">
+    <div>
+      <strong>WorkRB</strong> is an open-source project maintained by
+      <a href="https://techwolf.com/"><img class="techwolf-logo" src="assets/img/techwolf-wordmark.svg" alt="TechWolf" style="vertical-align:middle;" /></a>
+      and the community.
+    </div>
+    <div>
+      <a href="https://github.com/techwolf-ai/workrb">GitHub</a> &middot;
+      <a href="https://pypi.org/project/workrb/">PyPI</a> &middot;
+      <a href="https://arxiv.org/abs/2604.13055">arXiv (WorkRB)</a> &middot;
+      <a href="https://arxiv.org/abs/2511.07969">arXiv (UWE)</a> &middot;
+      <a href="https://recsyshr.aau.dk/">RecSys-HR</a> &middot;
+      <a href="challenges/recsys-hr-2026.html">2026 Challenge</a> &middot;
+      <a href="mailto:workrb@techwolf.ai">workrb@techwolf.ai</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
