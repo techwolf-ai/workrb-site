@@ -61,13 +61,9 @@
 <body>
 
 <div class="status-banner">
-  🐝 <strong>The challenge is live.</strong> The development (validation) phase has been
-  <strong>extended to 24 June 2026</strong>. Rules, datasets, starter code, and the
-  validation submission system are all open. <strong>Register on
-  <a href="https://www.codabench.org/competitions/16900/" rel="noopener">CodaBench</a> to receive
-  challenge updates</strong>, since it is the only way we can reach you. Then grab the
-  <a href="https://github.com/techwolf-ai/workrb-recsys-hr-challenge-2026" rel="noopener">starter repo</a>
-  and start submitting.
+  🐝 <strong>The test phase is now live.</strong> Submit your test rankings on
+  <a href="https://www.codabench.org/competitions/16900/" rel="noopener">CodaBench</a>, the only
+  place to see your score.
 </div>
 
 <nav class="nav">
@@ -217,8 +213,8 @@
     <p>
       Open-source skill-extraction and skill-normalisation <strong>validation</strong> sets,
       enriched with graded-relevance annotations, are available now as new tasks inside
-      <a href="https://github.com/techwolf-ai/workrb">WorkRB</a>. The validation phase has
-      <strong>no submission cap</strong>, so use it freely to debug your pipeline. Not all datasets have a validation set, so this signal is more limited than the final evaluation. Feel free to adjust the validation score code in your local setup!
+      <a href="https://github.com/techwolf-ai/workrb">WorkRB</a>. While the validation phase is closed, you can still 
+      generate your validation score locally using WorkRB.
     </p>
 
     <h3>Test</h3>
@@ -307,19 +303,19 @@
       </thead>
       <tbody>
         <tr>
-          <td>2 Jun 2026 <span style="color:var(--honey-deep);font-weight:600;">(now live)</span></td>
+          <td>2 Jun 2026</td>
           <td>Challenge resources launch</td>
           <td>Rules, training data, hello-world training setup, and knowledge notebook are out. Registration is open on CodaBench. The WorkRB validation tasks and submission system are live, with no submission cap during the validation phase.</td>
         </tr>
         <tr>
-          <td>24 Jun 2026</td>
+          <td>24 Jun 2026 <span style="color:var(--honey-deep);font-weight:600;">(now live)</span></td>
           <td>Test submissions open</td>
-          <td>The development (validation) phase has been extended to 24 Jun 2026. After it closes you can submit test rankings, and the leaderboard goes live on CodaBench.</td>
+          <td>The validation phase has closed and the test phase is open. Submit your test rankings on CodaBench, where the leaderboard is now live. This is the only place to see your score. Evaluation can take around 20 minutes per submission, which is normal.</td>
         </tr>
         <tr>
           <td>31 Jul 2026</td>
           <td>Submissions close</td>
-          <td>Every team submits their training code (kept confidential, not judged on quality) so we can collect insights from every approach, not only the winners. The organisers then begin work on the summary paper. Submitters whose approach surfaces something new will be invited to either publish an arXiv version themselves or be cited by a self-chosen name.</td>
+          <td>Every team submits their training code (kept confidential, not judged on quality) so we can collect insights from every approach, not only the winners. The organisers then begin work on the summary paper. Submitters whose approach surfaces something scientifically interesting (think data, compute, or cost efficiency, or genuine novelty, not just a high score) will be invited to either publish an arXiv version themselves or be cited by a self-chosen name.</td>
         </tr>
         <tr>
           <td>Sep 2026</td>
@@ -329,7 +325,7 @@
         <tr>
           <td>RecSys-HR workshop</td>
           <td>Workshop &amp; awards</td>
-          <td>Top-3 teams get a 5-minute pitch slot at <a href="https://recsyshr.aau.dk/">RecSys-HR</a>, one of the largest recommender-systems workshop tracks. Other teams with strong results may be invited to present in the poster session: a chance to put your work in front of the field.</td>
+          <td>Top-3 teams get a 5-minute pitch slot at <a href="https://recsyshr.aau.dk/">RecSys-HR</a>, one of the largest recommender-systems workshop tracks. Invitations to the poster session are <strong>not limited to the leaderboard top</strong>: teams whose approach is scientifically interesting are just as likely to be invited, judged subjectively on dimensions such as data efficiency, compute efficiency, cost efficiency, and novelty. A lean, clever system can earn its place over a heavier one that merely ranks higher.</td>
         </tr>
       </tbody>
     </table>
@@ -360,8 +356,9 @@
       <li>
         <strong>Submit ranking files to CodaBench.</strong> Ranking files are produced by
         the <a href="https://github.com/techwolf-ai/workrb">WorkRB package</a> so the
-        format is consistent across participants. Validation submissions are unlimited;
-        the test phase allows up to <strong>10 submissions per team</strong>.
+        format is consistent across participants. The validation phase is now closed; the
+        test phase is open and allows up to <strong>10 submissions per team</strong>.
+        CodaBench is the only place to see your score.
       </li>
     </ol>
     <p>
@@ -379,7 +376,7 @@
       <li>The training set may be enriched with <strong>any open-source dataset</strong>, except for the ones used for testing. Top performers will be requested to submit their training code.</li>
       <li>Open-source skill-extraction training strategies cannot be exactly reproduced as your submission. Most of them are already on the leaderboard as baselines anyway.</li>
       <li>The <a href="https://github.com/techwolf-ai/workrb">WorkRB package</a> must be used to generate the standardised output rankings of your model.</li>
-      <li>Submissions during the <strong>validation phase</strong> are unlimited. Submissions during the <strong>test phase</strong> are capped at <strong>5 per team</strong>.</li>
+      <li>Submissions during the <strong>validation phase</strong> are unlimited. Submissions during the <strong>test phase</strong> are capped at <strong>10 per team</strong>.</li>
       <li>The student competition is, surprisingly, only for students. 😉 The top student team will be requested to prove their student status.</li>
       <li>If the best student team finishes in the top 2 overall, the 3rd-place team receives the €1000 prize and the 4th-place team receives €500.</li>
       <li>By registering, participants consent to the public release of their name and leaderboard scores, which may be discussed in the challenge summary paper. The organisers reserve the right to modify or add terms and conditions at any time.</li>
