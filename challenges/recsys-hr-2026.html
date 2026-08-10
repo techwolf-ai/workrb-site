@@ -35,7 +35,7 @@
     "alternateName": ["RecSys HR 2026", "WorkRB Challenge 2026", "recsys-hr-2026"],
     "description": "Skill extraction and normalisation challenge on ESCO skills, evaluated via the open-source WorkRB toolkit with graded-relevance scoring.",
     "startDate": "2026-06-02",
-    "endDate": "2026-07-31",
+    "endDate": "2026-08-04",
     "eventStatus": "https://schema.org/EventScheduled",
     "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
     "location": {
@@ -61,9 +61,10 @@
 <body>
 
 <div class="status-banner">
-  🐝 <strong>The test phase is now live.</strong> Submit your test rankings on
-  <a href="https://www.codabench.org/competitions/16900/" rel="noopener">CodaBench</a>, the only
-  place to see your score.
+  🐝 <strong>The challenge has closed.</strong> Participants: submit your code via GitHub with
+  <a href="https://github.com/warreveys" rel="noopener">warreveys</a> as collaborator (see
+  <a href="#rules">Rules</a>). Next up: the summary paper, then
+  <a href="https://recsyshr.aau.dk/" rel="noopener">RecSys-HR</a> invitations.
 </div>
 
 <nav class="nav">
@@ -207,8 +208,11 @@
 
     <h3>Training</h3>
     <p>
-      Any <strong>open-source</strong> dataset is allowed, except for the ones used in the
-      test set (see Rules). The starter scripts already include TechWolf’s synthetic ESCO skill sentences. The SOTA notebook lists further
+      Any <strong>open-source</strong> dataset is allowed, except for the benchmarks used in the
+      test set (see <a href="#rules">Rules</a>). Those benchmarks are also publicly available with
+      their original binary annotations, and <strong>those public versions are off-limits too</strong>:
+      neither their queries nor their annotations may be used anywhere in your system. The starter
+      scripts already include TechWolf’s synthetic ESCO skill sentences. The SOTA notebook lists further
       useful skill-extraction datasets, but don’t let the starter files limit your
       imagination. Maybe regularising with non-skill extraction data helps semantic understanding 👀
     </p>
@@ -227,8 +231,14 @@
       <li><strong>Skill normalisation:</strong> ESCO skill normalisation.</li>
     </ul>
     <p>
-      The graded-relevance test annotations are kept hidden during the challenge and will
-      be released through WorkRB after submissions close.
+      The graded-relevance test annotations were kept hidden for the duration of the challenge
+      and are released through WorkRB now that submissions have closed.
+    </p>
+    <p>
+      These benchmarks also exist publicly in their original, binary-annotated form. Using those
+      public versions in a submitted system was <strong>not</strong> permitted, in any capacity:
+      the queries were as off-limits as the labels. See the <a href="#rules">Rules</a> for the
+      full statement.
     </p>
   </div>
 </section>
@@ -312,14 +322,14 @@
           <td>Rules, training data, hello-world training setup, and knowledge notebook are out. Registration is open on CodaBench. The WorkRB validation tasks and submission system are live, with no submission cap during the validation phase.</td>
         </tr>
         <tr>
-          <td>24 Jun 2026 <span style="color:var(--honey-deep);font-weight:600;">(now live)</span></td>
+          <td>24 Jun 2026</td>
           <td>Test submissions open</td>
-          <td>The validation phase has closed and the test phase is open. Submit your test rankings on CodaBench, where the leaderboard is now live. This is the only place to see your score. Evaluation can take around 20 minutes per submission, which is normal.</td>
+          <td>The validation phase closed and the test phase opened, with test rankings submitted on CodaBench and the leaderboard live there.</td>
         </tr>
         <tr>
-          <td>31 Jul 2026</td>
+          <td>4 Aug 2026 <span style="color:var(--ink-soft);font-weight:400;">(extended from 31 Jul)</span></td>
           <td>Submissions close</td>
-          <td>Every team submits their training code (kept confidential, not judged on quality) so we can collect insights from every approach, not only the winners. The organisers then begin work on the summary paper. Submitters whose approach surfaces something scientifically interesting (think data, compute, or cost efficiency, or genuine novelty, not just a high score) will be invited to either publish an arXiv version themselves or be cited by a self-chosen name.</td>
+          <td>Every team submits their training and inference code through a private GitHub repository with <a href="https://github.com/warreveys" rel="noopener">warreveys</a> added as a collaborator (kept confidential, not judged on quality) so we can collect insights from every approach, not only the winners. The organisers then begin work on the summary paper. Submitters whose approach surfaces something scientifically interesting (think data, compute, or cost efficiency, or genuine novelty, not just a high score) will be invited to either publish an arXiv version themselves or be cited by a self-chosen name.</td>
         </tr>
         <tr>
           <td>Sep 2026</td>
@@ -360,9 +370,9 @@
       <li>
         <strong>Submit ranking files to CodaBench.</strong> Ranking files are produced by
         the <a href="https://github.com/techwolf-ai/workrb">WorkRB package</a> so the
-        format is consistent across participants. The validation phase is now closed; the
-        test phase is open and allows up to <strong>10 submissions per team</strong>.
-        CodaBench is the only place to see your score.
+        format is consistent across participants. Both phases are now closed: the test phase
+        allowed up to <strong>10 submissions per team</strong>, and CodaBench was the only
+        place to see your score.
       </li>
     </ol>
     <p>
@@ -377,13 +387,27 @@
     <h2>Rules</h2>
     <p>Any violation excludes you from both the main and the student prize tracks.</p>
     <ul>
-      <li>The training set may be enriched with <strong>any open-source dataset</strong>, except for the ones used for testing.</li>
+      <li>
+        The training set may be enriched with <strong>any open-source dataset</strong>, except for
+        the ones used for testing.
+      </li>
+      <li>
+        <strong>The test benchmarks are strictly off-limits, in any form and at any stage.</strong>
+        House, Tech, TechWolf, SkillSkape, and SkillNorm all exist publicly with their original
+        binary annotations. Those public versions may not be used for anything: not for training,
+        fine-tuning, distillation, pre-training, retrieval, few-shot prompting, nearest-neighbour
+        lookup, thresholding, calibration, model selection, or any other part of a submitted
+        system. This covers <em>both</em> the annotations and the <em>queries</em>, whether the
+        labels are binary, graded, or derived. Matching a test query back to its public entry to
+        recover its label is exactly the behaviour this rule forbids. If your system would score
+        differently with those public files absent, it violates this rule.
+      </li>
       <li>Open-source skill-extraction training strategies cannot be exactly reproduced as your submission. Most of them are already on the leaderboard as baselines anyway.</li>
       <li>Submissions during the <strong>validation phase</strong> are unlimited. Submissions during the <strong>test phase</strong> are capped at <strong>10 per team</strong>.</li>
       <li>The student competition is, surprisingly, only for students. 😉 The top student team will be requested to prove their student status.</li>
       <li>If the best student team finishes in the top 2 overall, the 3rd-place team receives the €1000 prize and the 4th-place team receives €500.</li>
       <li>By registering, participants consent to the public release of their name and leaderboard scores, which may be discussed in the challenge summary paper. The organisers reserve the right to modify or add terms and conditions at any time.</li>
-      <li>At the end of the challenge, all participants should submit their training and inference code.</li>
+      <li>At the end of the challenge, all participants should submit their training and inference code. Push it to a GitHub repository (private is fine) and add <a href="https://github.com/warreveys" rel="noopener">warreveys</a> as a collaborator, then email the repository link to <a href="mailto:recsys-hr-challenge@techwolf.ai">recsys-hr-challenge@techwolf.ai</a>. Code is kept confidential and is not judged on quality.</li>
     </ul>
   </div>
 </section>
